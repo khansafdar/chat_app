@@ -10,7 +10,7 @@ const io=socketio(server)
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-
+const SERVER_PORT=process.env.PORT || 8888
 let idUserMap={}
 
 io.on('connection',(socket)=>{
@@ -45,7 +45,7 @@ app.use('/',express.static(__dirname +'/public'))
 
 db.sync()
 .then(()=>{
-    server.listen(8877,()=>{
+    server.listen(SERVER_PORT,()=>{
         console.log('server started on http://localhost:8877')
     })
 })
