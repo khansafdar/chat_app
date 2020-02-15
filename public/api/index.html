@@ -5,21 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chat_Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="../socket.io/socket.io.js"></script>
     <script src="script.js"></script>
 </head>
-<body>
-    <h1>chat_App</h1>
-    <div id="loginform">
-     <input type="text" id="username" placeholder="username"></input> 
-     <input type="password" id="password" placeholder="password"></input> 
-     <button id="login">LOGIN</button>  
-    </div>
-    <div id="chatbox">
-        <input id="msg">
-        <button id="send">SEND</button>
-        <ul id="chats"></ul>
+<body background="safdar1.jpg">
+    <br><br><br><br>
+        <div class="container alert alert-info " style="width: 25%" >
+         <div class="row">
+            <div class="col"></div>
+            <div id="loginform" class="container p-5 col">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+            <strong class="text-primary alert alert-info m-5 p-10">ENTER THE  USERNAME  AND  PASSWORD</strong>
+            <br>
+            <label class="alert alert-success" >username</label>
+            <input type="text" id="username" placeholder="username" class="m-3 border-top p-4"></input>
+            <br>
+            <label class="alert alert-success">password</label> 
+            <input type="password" id="password" placeholder="password"></input> 
+            <br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <button id="login" type="button" class="btn btn-outline-primary">LOGIN</button>  
+            </div>
+            <div class="col"></div>
+        </div>
+        <div id="chatbox">
+            <strong class="alert alert-success">MESSAGE HERE</strong>
+            <br>
+            <input id="msg">
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <button id="send" class="alert alert-success">SEND</button>
+            <ul id="chats"></ul>
+        </div>
     </div>    
 </body>
 </html>

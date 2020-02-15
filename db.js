@@ -10,8 +10,12 @@ const db = new Sequelize('safdar', 'root','66666688', {
   })
 
 const Users = db.define('user', {
-    firstName:Sequelize.STRING,
-    lastName:Sequelize.STRING,
+    firstName:{
+      type:Sequelize.STRING,
+    },
+    lastName:{
+      type:Sequelize.STRING
+    },
     username: {
       type: Sequelize.STRING(30),
       unique: true,
@@ -23,6 +27,13 @@ const Users = db.define('user', {
     },
     email:{
       type:Sequelize.STRING(40)
+    },
+    fbToken: {
+      type: Sequelize.TEXT
+    },
+    fbId: {
+      type: Sequelize.STRING(30),
+      unique: true
     }
 })  
 exports=module.exports={

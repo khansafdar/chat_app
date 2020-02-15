@@ -7,14 +7,20 @@ $(()=>{
     $('#chatbox').hide()
     let username = ''
     $('#login').click(function(){
-        $.get('/login',(data)=>{
-            if(data.username==$('#username')){        
+        $.post('/login',{
+            username: $('#username').val(),
+            password:$('#password').val()
+        },(data)=>{
+            if(data.username!=$('#username').val() || data.password!=$('#password').val()){
+                window.alert('please signup firstly')
+                return window.location.replace("../");
+            }
+
+            else{
                 socket.emit('login', {
-                username : $('#username').val(),
-            })
-        }else{
-            window.alert('pls sign up firstly')
-        }
+                    username : $('#username').val(),
+                })
+            }
         })
     })
 

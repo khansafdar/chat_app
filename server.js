@@ -4,8 +4,6 @@ const socketio=require('socket.io')
 const {
     db
 } = require('./db')
-const routes = require('./routes/login')
-
 const app=express()
 const server=http.createServer(app)
 const io=socketio(server)
@@ -41,7 +39,8 @@ io.on('connection',(socket)=>{
 })
 
 })
-app.use('/login', routes)
+app.use('/login', (require('./routes/login').route))
+app.use('/signup', (require('./routes/signup').route))
 app.use('/',express.static(__dirname +'/public'))
 
 db.sync()

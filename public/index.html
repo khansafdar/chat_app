@@ -4,30 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGN UP PAGE</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="index.js"></script>
 </head>
-<body>
-    <h1> please sign up to this page if u have not sign up</h1>
-    <label >FIRST NAME</label>
+<body background="safdar4.jpg">
+    <div class="container alert alert-info " style="width: 25%" >
+    <strong class="text-primary alert alert-info m-5 p-10"> NOT AN USER ?PLS SIGNUP</strong>
+    <br>
+    <label class="alert alert-success" >FIRST NAME</label>
     <input id="firstname" placeholder="firstname">
     <br>
-    <label >LAST NAME</label>
+    <label class="alert alert-success">LAST NAME</label>
     <input id="lastname" placeholder="lastname">
     <br>
-    <label >USER NAME</label>
+    <label class="alert alert-success">USER NAME</label>
     <input id="username" placeholder="username">
     <br>
-    <label >PASSWORD</label>
+    <label class="alert alert-success">PASSWORD</label>
     <input id="password" placeholder="password">
     <br>
-    <label >email</label>
+    <label class="alert alert-success">email</label>
     <input id="email" placeholder="email">
     <br>
-    <button id="submit">SIGN-UP</button>
+    <button id="submit" class="alert alert-success">SIGN-UP</button>
     <br><br>
-    <h1>pls enter the link below to login if u have already a user</h1>
+    <strong class="text-primary alert alert-info m-5 p-10">ALREADY AN USER?PLS LOGIN</strong>
     <a href="/api">click here</a>
+    <br>
+    <div id="chatbox">
+    </div>
     
 </body>
 </html>
